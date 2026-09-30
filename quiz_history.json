@@ -1,0 +1,115 @@
+[
+    {
+        "id": "20260930151521998472",
+        "date": "2026-09-30 15:15:21",
+        "score": 3,
+        "total": 10,
+        "accuracy": 30.0,
+        "documents": [
+            "DLP UNIT 1.pdf",
+            "Unit 2 DLP.pptx.pdf"
+        ],
+        "questions": [
+            {
+                "question": "What is the main purpose of an activation function in an ANN?",
+                "selected_answer": "A",
+                "selected_text": "To convert an input signal of a node to an output signal",
+                "correct_answer": "A",
+                "correct_text": "To convert an input signal of a node to an output signal",
+                "is_correct": true,
+                "explanation": "The source states that the main purpose is to convert an input signal of a node in an ANN to an Output Signal.",
+                "source": "DLP UNIT 1.pdf - 22"
+            },
+            {
+                "question": "Which of the following describes the function of the Input Layer in an Artificial Neural Network?",
+                "selected_answer": "A",
+                "selected_text": "Performs intermediate processing",
+                "correct_answer": "B",
+                "correct_text": "Takes/processes data",
+                "is_correct": false,
+                "explanation": "According to the provided definitions, the Input Layer takes/processes data.",
+                "source": "DLP UNIT 1.pdf - 8"
+            },
+            {
+                "question": "What does a loss value greater than 1 signify in the context provided?",
+                "selected_answer": "B",
+                "selected_text": "Correct classification, but the margin is insufficient",
+                "correct_answer": "C",
+                "correct_text": "Incorrect classification",
+                "is_correct": false,
+                "explanation": "The source explicitly lists that Loss > 1 indicates incorrect classification.",
+                "source": "DLP UNIT 1.pdf - 73"
+            },
+            {
+                "question": "Which attention type considers the complete input sequence?",
+                "selected_answer": "B",
+                "selected_text": "Hard Attention",
+                "correct_answer": "C",
+                "correct_text": "Global Attention",
+                "is_correct": false,
+                "explanation": "Under Types of Attention, Global Attention is defined as considering the complete input sequence.",
+                "source": "Unit 2 DLP.pptx.pdf - 47"
+            },
+            {
+                "question": "What is the function of Regularization in a neural network?",
+                "selected_answer": "B",
+                "selected_text": "Adds a penalty to the loss function for overly complex models to prevent overfitting",
+                "correct_answer": "B",
+                "correct_text": "Adds a penalty to the loss function for overly complex models to prevent overfitting",
+                "is_correct": true,
+                "explanation": "The table for Parameter Meaning states that Regularization adds a penalty to the loss function for overly complex models and prevents overfitting.",
+                "source": "DLP UNIT 1.pdf - 114"
+            },
+            {
+                "question": "How many neurons are in the input layer and the output layer according to the explanation of layers in ANN on page 20?",
+                "selected_answer": "C",
+                "selected_text": "One input neuron and four output neurons",
+                "correct_answer": "A",
+                "correct_text": "Two input neurons and three output neurons",
+                "is_correct": false,
+                "explanation": "The text states that the input layer has two input neurons, while the output layer consists of three neurons.",
+                "source": "DLP UNIT 1.pdf - 20"
+            },
+            {
+                "question": "Which model can only handle linearly separable data and cannot solve more complex problems like the XOR problem?",
+                "selected_answer": "A",
+                "selected_text": "Multi-layer Perceptron",
+                "correct_answer": "B",
+                "correct_text": "Single-layer Perceptron Model",
+                "is_correct": false,
+                "explanation": "The Single-layer Perceptron model can only handle linearly separable data and cannot solve more complex problems that involve non-linear data, such as the XOR problem.",
+                "source": "DLP UNIT 1.pdf - 45"
+            },
+            {
+                "question": "What is the candidate activation vector computed using?",
+                "selected_answer": "A",
+                "selected_text": "A sigmoid activation function",
+                "correct_answer": "B",
+                "correct_text": "A tanh activation function",
+                "is_correct": false,
+                "explanation": "The candidate activation vector is computed using a tanh activation function that squashes its output between -1 and 1.",
+                "source": "Unit 2 DLP.pptx.pdf - 35"
+            },
+            {
+                "question": "What does Mean Bias Error (MBE) help in determining?",
+                "selected_answer": "A",
+                "selected_text": "Whether the model has a positive bias or negative bias",
+                "correct_answer": "A",
+                "correct_text": "Whether the model has a positive bias or negative bias",
+                "is_correct": true,
+                "explanation": "Mean Bias Error can help in determining whether the model has a positive bias or negative bias.",
+                "source": "DLP UNIT 1.pdf - 60"
+            },
+            {
+                "question": "Which gate in a GRU decides how much of the previous information should be forgotten when processing the new input?",
+                "selected_answer": "A",
+                "selected_text": "Update Gate",
+                "correct_answer": "B",
+                "correct_text": "Reset Gate",
+                "is_correct": false,
+                "explanation": "The reset gate decides how much of the previous information should be forgotten when processing the new input.",
+                "source": "Unit 2 DLP.pptx.pdf - 16"
+            }
+        ]
+    }
+]
