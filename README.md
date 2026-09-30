@@ -9,13 +9,16 @@ Users can upload college notes and ask questions, generate summaries, take AI-ge
 ## ✨ Features
 
 ### 🤖 Ask AI
+
 - Ask questions from uploaded PDFs
 - RAG-based question answering
 - Context-aware follow-up questions
 - Source PDF and page references
 
 ### 📖 AI Summary
+
 Generate structured study notes containing:
+
 - Main topics
 - Key concepts
 - Important definitions
@@ -23,6 +26,7 @@ Generate structured study notes containing:
 - Exam revision points
 
 ### 📝 AI Quiz
+
 Generate multiple-choice questions from study materials.
 
 - 10-question quizzes
@@ -32,6 +36,7 @@ Generate multiple-choice questions from study materials.
 - Source references
 
 ### 📚 Quiz History
+
 Review previous quiz attempts.
 
 - Total attempts
@@ -48,10 +53,13 @@ Review previous quiz attempts.
 - Source
 
 ### 🗂️ Flashcards
+
 Generate AI-powered flashcards for quick revision.
 
 ### 📊 Study Dashboard
+
 Track:
+
 - Documents
 - Questions asked
 - Quiz attempts
@@ -60,13 +68,65 @@ Track:
 - Flashcards reviewed
 
 ### 📄 Multiple PDF Support
+
 - Upload multiple PDFs
 - Select specific documents for searching
 - Process documents
 - Remove documents
 
 ---
-📁 Project Structure
+
+## 🧠 RAG Architecture
+
+```text
+PDF
+ │
+ ▼
+PDF Loader
+ │
+ ▼
+Text Chunking
+ │
+ ▼
+Hugging Face Embeddings
+ │
+ ▼
+ChromaDB
+ │
+ ▼
+Similarity Search
+ │
+ ▼
+Relevant Context
+ │
+ ▼
+Gemini
+ │
+ ▼
+AI Answer + Sources
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Application development |
+| Streamlit | Web interface |
+| LangChain | RAG pipeline |
+| ChromaDB | Vector database |
+| Hugging Face | Embeddings |
+| Sentence Transformers | Text embeddings |
+| Gemini | Large Language Model |
+| PyPDF | PDF processing |
+| python-dotenv | Environment variables |
+
+---
+
+## 📁 Project Structure
+
+```text
 Studymate-Ai/
 │
 ├── app.py
@@ -74,80 +134,151 @@ Studymate-Ai/
 ├── README.md
 ├── .gitignore
 └── src/
+```
 
-The following files/folders are intentionally not included in GitHub:
+### Files excluded from GitHub
+
+The following files and folders contain local, generated, or sensitive data and should not be uploaded:
+
+```text
 .env
 venv/
 chroma_db/
 documents/
+documents.json
 quiz_history.json
 study_stats.json
+```
 
-⚙️ Installation
-1. Clone the repository
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Anshshah1145/Studymate-Ai.git
+```
 
-2. Open the project
+### 2. Open the Project
+
+```bash
 cd Studymate-Ai
+```
 
-3. Create a virtual environment
+### 3. Create a Virtual Environment
+
+```bash
 python3 -m venv venv
+```
 
-4. Activate the virtual environment
-macOS / Linux
+### 4. Activate the Virtual Environment
+
+#### macOS / Linux
+
+```bash
 source venv/bin/activate
+```
 
-Windows
+#### Windows
+
+```bash
 venv\Scripts\activate
+```
 
-5. Install dependencies
+### 5. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-🔑 API Key Setup
-StudyMate AI uses the Gemini API.
+---
+
+## 🔑 API Key Setup
+
+StudyMate AI uses the **Gemini API**.
+
 Create a file named:
+
+```text
 .env
+```
 
-Add:
+Add your API key:
+
+```env
 GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+```
 
-Replace YOUR_GEMINI_API_KEY with your own Gemini API key.
-Never upload .env to GitHub.
-▶️ Run the Application
-After installing the dependencies:
+Replace `YOUR_GEMINI_API_KEY` with your own Gemini API key.
+
+> ⚠️ Never upload your `.env` file or API key to GitHub.
+
+---
+
+## ▶️ Run the Application
+
+After installing the dependencies, run:
+
+```bash
 streamlit run app.py
+```
 
 The application will open in your browser.
-🔄 How It Works
-1. Upload PDF
+
+---
+
+## 🔄 How It Works
+
+### 1. Upload PDF
+
 The user uploads one or more study PDFs.
-2. Process Documents
-StudyMate AI:
+
+### 2. Process Documents
+
+StudyMate AI processes the documents through the following pipeline:
+
+```text
 PDF
  ↓
 Text Extraction
  ↓
-Chunking
+Text Chunking
  ↓
 Embeddings
  ↓
 ChromaDB
+```
 
-3. Ask a Question
+### 3. Ask a Question
+
 The user asks a question about their study material.
-4. Retrieve Relevant Information
+
+### 4. Retrieve Relevant Information
+
 ChromaDB performs similarity search and retrieves the most relevant document chunks.
-5. Generate Answer
-The retrieved context is sent to Gemini.
-6. Display Answer
+
+### 5. Generate Answer
+
+The retrieved context is provided to Gemini.
+
+### 6. Display Answer
+
 The application displays:
+
+```text
 AI Answer
 +
 Source PDF
 +
 Page Number
+```
 
-📝 Quiz Workflow
+---
+
+## 📝 Quiz Workflow
+
+```text
 Selected PDFs
       ↓
 Relevant Content
@@ -163,8 +294,13 @@ Answer Evaluation
 Score + Explanation
       ↓
 Quiz History
+```
 
-🗂️ Flashcard Workflow
+---
+
+## 🗂️ Flashcard Workflow
+
+```text
 Study Material
       ↓
 Relevant Concepts
@@ -174,18 +310,47 @@ Gemini
 Flashcards
       ↓
 Revision
+```
 
-🔐 Security
-Sensitive and generated files are excluded from the repository.
+---
+
+## 📊 Study Dashboard
+
+The dashboard provides an overview of the student's study activity.
+
+It tracks:
+
+- Questions asked
+- Quiz attempts
+- Quiz questions answered
+- Correct answers
+- Quiz accuracy
+- Flashcards generated
+- Flashcards reviewed
+- Summaries generated
+
+---
+
+## 🔐 Security
+
+Sensitive information and generated study data are excluded from the repository.
+
+```text
 .env
 venv/
 chroma_db/
 documents/
+documents.json
 quiz_history.json
 study_stats.json
+```
 
 The Gemini API key should never be committed to GitHub.
-🚀 Future Improvements
+
+---
+
+## 🚀 Future Improvements
+
 - User authentication
 - Cloud database
 - Per-user quiz history
@@ -196,12 +361,21 @@ The Gemini API key should never be committed to GitHub.
 - Advanced RAG retrieval
 - Public cloud deployment
 - Mobile application
-👨‍💻 Author
-Ansh Shah
-MCA Student
-MIT-WPU
-GitHub:
-https://github.com/Anshshah1145
-⭐ Project
-If you find StudyMate AI useful, consider giving the repository a ⭐.
 
+---
+
+## 👨‍💻 Author
+
+**Ansh Shah**
+
+MCA Student  
+MIT-WPU
+
+GitHub:  
+https://github.com/Anshshah1145
+
+---
+
+## ⭐ Project
+
+If you find StudyMate AI useful, consider giving the repository a ⭐.
