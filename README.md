@@ -205,10 +205,3 @@ https://github.com/Anshshah1145
 ⭐ Project
 If you find StudyMate AI useful, consider giving the repository a ⭐.
 
-### Put it on GitHub
-
-From your Terminal:
-
-```bash
-cd ~/rag-studymate
-nano README.md
